@@ -10,7 +10,7 @@ describe('Put requests APIs', () => {
             body:
             {
                 "name": "asim",
-                "job": "Sr. SQA"
+                "job": "SQA"
             }
         })
             .its('status')
