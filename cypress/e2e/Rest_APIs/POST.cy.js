@@ -38,6 +38,7 @@ describe('Post requests APIs', () => {
         cy.request({
             method: 'POST',
             url: 'https://reqres.in/api/register',
+            failOnStatusCode: false,
             body: {
                 "email": "sydney@fife"
             }
@@ -64,11 +65,12 @@ describe('Post requests APIs', () => {
         })
 
     })
-    it('User Register Successful Request', () => {
+    it('User login Unsuccessful Request', () => {
 
         cy.request({
             method: 'POST',
             url: 'https://reqres.in/api/login',
+            failOnStatusCode: false,
             body: {
                 "email": "peter@klaven"
             }

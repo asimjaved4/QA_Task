@@ -32,7 +32,8 @@ describe('Get requests APIs', () => {
 
         cy.request({
             method: 'GET',
-            url: 'https://reqres.in/api/users/23'
+            url: 'https://reqres.in/api/users/23',
+            failOnStatusCode: false
         })
             .then((responce) => {
                 expect(responce.status).to.eq(404)
@@ -68,7 +69,8 @@ describe('Get requests APIs', () => {
 
         cy.request({
             method: 'GET',
-            url: 'https://reqres.in/api/unknown/23'
+            url: 'https://reqres.in/api/unknown/23',
+            failOnStatusCode: false
         })
             .then((responce) => {
                 expect(responce.status).to.eq(404)
